@@ -11,3 +11,5 @@ Wird die Seite im Browser ohne Parameter aufgerufen, so kann man einige Punkte e
 * Lösungsbutton "spoil" ja/nein, bestimmt den Parameter inLsg (true oder false/weglassen)
 
 Danach erscheint eine Liste mit Funktionen, deren Ableitung einzugeben ist
+
+Test auf http://zb42.de/ableitung/
