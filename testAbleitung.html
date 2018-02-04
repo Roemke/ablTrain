@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+  Copyright 2017 Karsten Roemke
+  Anregungen an k ponkt roemke at gmx in de
+  Lizenz: MIT / GPL2
+  Unter Verwendung von jQuery und polynomial.js 
+  (polynomial.js: Copyright (c) 2015, Robert Eisele Dual licensed under the MIT or GPL Version 2 licenses.)
+-->
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/testAbleitung.css">
+<script type="text/JavaScript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/JavaScript" src="js/fraction.js"></script>
+<script type="text/JavaScript" src="js/polynomial.js"></script>
+<script type="text/JavaScript" src="js/modifikation.js"></script> <!-- Aenderung an Fraction -->
+<script type="text/JavaScript" src="js/testAbleitung.js"></script>
+</head>
+<body>
+  <form id="formConfig" class="displayNone" action="testAbleitung.html" method="get">
+    <ul>
+      <li>
+        <label for="inAnzahl">Anzahl:</label>
+        <input id="inAnzahl" type="number" min="1">
+      </li>
+      <li>
+        <label for="inGrad">maximaler Grad:</label>
+        <input id="inGrad" type="number" min="1">
+      </li>
+      <li>
+        <label for="inBruch">Br&uuml;che m&ouml;glich:</label>
+        <input id="inBruch" type="checkbox">
+      </li>
+      <li>
+        <label for="inParameter">Parameter m&ouml;glich:</label>
+        <input id="inParameter" type="checkbox">
+      </li>
+      <li>
+        <label for="inLsg">L&ouml;sung zeigen (Button):</label>
+        <input id="inLsg" type="checkbox">
+      </li>
+      <li>
+        <label for="bConfigOk"> </label>
+        <button id="bConfigOk" type="button">ok</button>   
+      </li>
+    </ul>
+  </form>
+  <div class="displayNone" id="divResults"></div>
+  <div id="divAnleitung" class="displayNone">
+    <p>Trainieren Sie Ableitungen </p> 
+    <p>Zur Eingabe (ist vom Browser ab&auml;ngig): Falls der Exponent kleiner als neun ist, z.B. drei so geben Sie einfach x^3 ein, das
+      ^&ndash;Zeichen wird eventuell angezeigt.<br>
+      Bei Exponenten größer als neun m&uuml;ssen Sie eventuell zweimal die Taste ^ dr&uuml;cken, umd das  ^-Zeichen 
+      zu bekommen.  <br>
+      Beispiel für den Exponenten 10: Eingabe x^10<br>
+      Ein "Malpunkt" / &middot; wird mit dem * eingeben oder man l&auml;&szlig;t ihn weg. Also z.B. 42x oder auch 42*x. 
+    </p>
+    <p>
+      Danach klicken Sie auf check. Der Computer korrigiert ggf. die Schreibweise Ihrer Eingabe. Sollte das nicht klappen, so steht ein NaN im Formularfeld. Danach pr&uuml;ft er, ob 
+      Sie richtig abgeleitet haben. 
+    </p>
+    <p class="right">Viel Erfolg</p>
+    <br class="endFloat">
+  </div>
+  <div id='divOutput'></div>
+  </body>
+</body>
